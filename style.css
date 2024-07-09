@@ -509,6 +509,47 @@ header.shadow{
     -1px -1px 2px rgba(255, 255, 255, 0.7);
     transition: .5s ease-in; 
 }
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid;
+    border-radius: 5px;
+
+}
+.social h1{
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.822),
+    -1px -1px 2px rgba(255, 255, 255, 0.322);
+}
+.link a{
+    font-size: 40px;
+    justify-content: center;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.822),
+    -1px -1px 2px rgba(255, 255, 255, 0.322);
+}
+.link a:hover{
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: var(--main-color);
+}
+.copyright{
+    position: absolute;
+    margin-top: 120px;
+    text-align: center;
+}
+.copyright h1{
+    font-size: 24px;
+}
+.copyright p{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.822),
+    -1px -1px 2px rgba(255, 255, 255, 0.322);
+}
 
 
 @media (max-width: 768px) {
