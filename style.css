@@ -630,7 +630,10 @@ footer{
         align-items: center;
         /* padding: 0 20px; */
     }
-    .navigation-buttons {
+    .about p{
+        text-align: center;
+    }
+    .navigation-buttons{
         display: flex;
         justify-content: center;
         width: 100%;
@@ -684,5 +687,12 @@ footer{
         overflow: hidden;
         padding: 3px 2px 3px;
         border-radius: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .navigation-buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 }
