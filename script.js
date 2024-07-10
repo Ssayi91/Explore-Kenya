@@ -22,3 +22,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000); // Give time for the opacity transition
     }, 5000); // Banner visible for 5 seconds
 });
+/*About*/
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+let slideInterval;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'flex' : 'none';
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+function startSlideShow() {
+    slideInterval = setInterval(nextSlide, 20000);
+}
+
+function stopSlideShow() {
+    clearInterval(slideInterval);
+}
+
+// Add event listeners to buttons
+prevButton.addEventListener('click', () => {
+    stopSlideShow();
+    prevSlide();
+    startSlideShow();
+});
+
+nextButton.addEventListener('click', () => {
+    stopSlideShow();
+    nextSlide();
+    startSlideShow();
+});
+
+// Initial display of the first slide
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+    startSlideShow();
+});
