@@ -630,6 +630,11 @@ footer{
         align-items: center;
         /* padding: 0 20px; */
     }
+    .navigation-buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
     button{
         padding: 8px 16px;
     }
