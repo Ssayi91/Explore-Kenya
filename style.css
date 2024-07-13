@@ -630,6 +630,7 @@ footer{
     .nav {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
     }
 
@@ -638,21 +639,36 @@ footer{
     }
 
     .navbar {
-        display: flex;
         flex-direction:column;
         align-items: center;
         row-gap: 16px;
+        flex-direction: column;
+        row-gap: 16px;
+        display: none; 
     }
 
     .navbar a {
         font-size: 18px;
     }
 
-    .home {
+    .navbar.active {
+        display: flex;
+    }
+
+    .searchbox {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .activities-container, .destinations-container, .stay-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .home, .destination {
         min-height: 480px;
-        background-position: center;
-        text-align: center;
-        padding-left: 0;
     }
 
     .home-text {
@@ -660,16 +676,13 @@ footer{
         padding: 20px;
     }
 
-    .home-text h1 {
+    .home-text h1, .destination-text h1 {
         font-size: 28px;
     }
 
-    .home-text p {
+    .home-text p, .destination-text p {
         font-size: 18px;
-    }
-
-    .activities-container {
-        gap: 16px;
+        padding: 20px;
     }
 
     .activities-container .box {
@@ -682,6 +695,11 @@ footer{
         overflow: hidden;
         padding: 3px 2px 3px;
         border-radius: 15px;
+    }
+    
+    .about img, .about h5, .about p {
+        padding: 20px;
+        
     }
    
     .about img {
@@ -702,34 +720,12 @@ footer{
         text-align: center;
         font-weight: 600;
     }
-    .about h5{
-        text-align: center;
-        font-weight: 600;
-        padding-top: 50px;
-        padding-left: 180px;
-        justify-content: space-around;
-    }
     .navigation-buttons{
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    /* button{
-        padding: 8px 16px;
-    } */
 
-    /* .about h3 {
-        font-size: 24px; 
-    }
-
-    .about p {
-        font-size: 16px; 
-    } */
-    /* button{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    } */
     .destination {
         min-height: 480px;
         background-position: center;
@@ -744,13 +740,12 @@ footer{
 
     .destination-text h1 {
         font-size: 28px;
+        color: var(--main-color);
     }
 
     .destination-text p {
         font-size: 18px;
-    }
-    .stay-container {
-        gap: 16px;
+        
     }
 
     .stay-container .box {
@@ -770,5 +765,27 @@ footer{
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .home-text h1, .destination-text h1 {
+        font-size: 24px;
+    }
+
+    .home-text p, .destination-text p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .about img, .about h5, .about p {
+        padding: 10px;
+    }
+
+    .activities-container .box, .destinations-container .box, .stay-container .box {
+        height: 200px;
     }
 }
