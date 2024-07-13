@@ -685,44 +685,51 @@ footer{
     }
    
     .about img {
-        width: 300px;
+        width: 500px;
         padding: 0 2px 0;
         margin: 0 50px 0;
         /* height: 300px; */
-        object-fit: contain;
+        object-fit: cover;
+        align-items: center;
 
     }
     .about{
         text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        /* padding: 0 20px; */
     }
     .about p{
         text-align: center;
+        font-weight: 600;
+    }
+    .about h5{
+        text-align: center;
+        font-weight: 600;
+        padding-top: 50px;
+        padding-left: 180px;
+        justify-content: space-around;
     }
     .navigation-buttons{
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    button{
+    /* button{
         padding: 8px 16px;
-    }
+    } */
 
-    .about h2 {
+    /* .about h3 {
         font-size: 24px; 
     }
 
     .about p {
         font-size: 16px; 
-    }
-    button{
+    } */
+    /* button{
         text-align: center;
         align-items: center;
         justify-content: center;
-    }
+    } */
     .destination {
         min-height: 480px;
         background-position: center;
