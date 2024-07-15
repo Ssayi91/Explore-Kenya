@@ -71,3 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
     startSlideShow();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.destinations-container .box h2').forEach(h2 => {
+        h2.addEventListener('click', function() {
+            const info = this.nextElementSibling;
+            if (info.style.opacity === '1') {
+                info.style.opacity = '0';
+            } else {
+                // Hide all other info boxes
+                document.querySelectorAll('.destinations-container .info').forEach(p => p.style.opacity = '0');
+                // Show the clicked one
+                info.style.opacity = '1';
+            }
+        });
+    });
+});

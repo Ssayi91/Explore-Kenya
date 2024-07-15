@@ -400,6 +400,14 @@ button:hover {
     border-bottom: 3px solid;
     border-radius: 3px;
 }
+.destinations-container .box {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+}
+
 .destination-text{
     padding-left: 30px;
 }
@@ -411,6 +419,7 @@ button:hover {
     margin: 0 40px 0;
     text-shadow:2px 2px 4px rgba(12, 12, 12, 0.822),
     -1px -1px 2px rgba(19, 3, 3, 0.856); 
+    cursor: pointer;
 }
 .destination-text span{
     color: var(--color);
@@ -498,6 +507,23 @@ button:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: ease-in-out 0.8s;
+}
+.destinations-container .info {
+    position: absolute;
+    font-size: 13px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.destinations-container .box:hover .info {
+    opacity: 1;
 }
 /*stay*/
 .heading{
