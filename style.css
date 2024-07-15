@@ -154,6 +154,8 @@ header.shadow{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-bottom: 3px solid;
+    border-radius: 3px;
 }
 .home-text{
     padding-left: 30px;
@@ -394,6 +396,9 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /* border-top: 3px solid; */
+    border-bottom: 3px solid;
+    border-radius: 3px;
 }
 .destination-text{
     padding-left: 30px;
@@ -411,7 +416,7 @@ button:hover {
     color: var(--color);
 }
 .destination-text p{
-    font-size: 22px;
+    font-size: 22 bb  nbpx;
     font-weight: 800;
     margin: 8px 0 16px;
     color: var(--bg-color);
